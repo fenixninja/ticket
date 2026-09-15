@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TICKEES</title>
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="fenix_icons/favicon.ico">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header con título alineado a la izquierda arriba y selector de idioma a la derecha -->
+  <header class="header">
+    <div class="header-left">
+      <div class="title-container">
+        <h1 class="logo-title">
+          <span>TICK</span><span>EES</span>
+        </h1>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="lang-selector-container">
+        <select id="langSelect" class="lang-select" aria-label="Seleccionar idioma">
+          <option value="es">🇪🇸 ES</option>
+          <option value="en">🇺🇸 EN</option>
+          <option value="de">🇩🇪 DE</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="hi">🇮🇳 HI</option>
+          <option value="zh">🇨🇳 ZH</option>
+          <option value="ja">🇯🇵 JA</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor principal donde se renderizan las tarjetas de concierto -->
+  <main class="main-content">
+    <section id="concertsContainer" class="concerts-grid">
+      <!-- Tarjeta renderizada dinámicamente -->
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

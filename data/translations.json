@@ -1,0 +1,79 @@
+{
+  "es": {
+    "appTitle": "TICKEES",
+    "presents": "PRESENTA EN CONCIERTO",
+    "screen": "ESCENARIO",
+    "row": "FILA",
+    "seat": "ASIENTO",
+    "price": "PRECIO",
+    "date": "FECHA",
+    "time": "HORA",
+    "buyTicket": "COMPRAR ENTRADA"
+  },
+  "en": {
+    "appTitle": "TICKEES",
+    "presents": "PRESENTS IN CONCERT",
+    "screen": "STAGE",
+    "row": "ROW",
+    "seat": "SEAT",
+    "price": "PRICE",
+    "date": "DATE",
+    "time": "TIME",
+    "buyTicket": "BUY TICKET"
+  },
+  "de": {
+    "appTitle": "TICKEES",
+    "presents": "PRÄSENTIERT IM KONZERT",
+    "screen": "BÜHNE",
+    "row": "REIHE",
+    "seat": "PLATZ",
+    "price": "PREIS",
+    "date": "DATUM",
+    "time": "UHRZEIT",
+    "buyTicket": "TICKET KAUFEN"
+  },
+  "fr": {
+    "appTitle": "TICKEES",
+    "presents": "PRÉSENTE EN CONCERT",
+    "screen": "SCÈNE",
+    "row": "RANG",
+    "seat": "PLACE",
+    "price": "PRIX",
+    "date": "DATE",
+    "time": "HEURE",
+    "buyTicket": "ACHETER BILLET"
+  },
+  "hi": {
+    "appTitle": "TICKEES",
+    "presents": "कॉन्सर्ट में प्रस्तुत",
+    "screen": "मंच",
+    "row": "पंक्ति",
+    "seat": "सीट",
+    "price": "मूल्य",
+    "date": "तारीख",
+    "time": "समय",
+    "buyTicket": "टिकट खरीदें"
+  },
+  "zh": {
+    "appTitle": "TICKEES",
+    "presents": "演唱会呈现",
+    "screen": "舞台",
+    "row": "排号",
+    "seat": "座位",
+    "price": "价格",
+    "date": "日期",
+    "time": "时间",
+    "buyTicket": "购买门票"
+  },
+  "ja": {
+    "appTitle": "TICKEES",
+    "presents": "コンサート開催",
+    "screen": "ステージ",
+    "row": "列",
+    "seat": "座席",
+    "price": "価格",
+    "date": "日付",
+    "time": "時間",
+    "buyTicket": "チケット購入"
+  }
+}

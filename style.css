@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+
+:root {
+  /* Fondo general estilo Thistle */
+  --bg-page: #d8bfd8;
+  --bg-page-shade: #ccb0cc;
+  --aurora-teal: #0fe1b7;
+  --aurora-cyan: #00d2ff;
+  --aurora-purple: #7b2cbf;
+  --dark-text: #1a1a24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  /* Fondo Thistle sólido para fusión 100% perfecta con los agujeros del ticket */
+  background-color: var(--bg-page);
+  color: var(--dark-text);
+  font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Título alineado arriba a la izquierda */
+.header {
+  width: 100%;
+  padding: 1rem 2rem 0.5rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Título con Efecto 3D original y responsive */
+h1.logo-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  line-height: 1;
+  color: white;
+  letter-spacing: 0.02em;
+  user-select: none;
+  text-shadow: 
+    0 0.1em 20px rgba(0, 0, 0, 0.9),
+    0.05em -0.03em 0 rgba(0, 0, 0, 1),
+    0.05em 0.005em 0 rgba(0, 0, 0, 1),
+    0em 0.08em 0 rgba(0, 0, 0, 1),
+    0.05em 0.08em 0 rgba(0, 0, 0, 1),
+    0px -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em 0.08em 0 rgba(0, 0, 0, 1),
+    -0.03em 0 0 rgba(0, 0, 0, 1),
+    0 0.15em 30px rgba(15, 225, 183, 0.45); /* Resplandor Aurora */
+  transition: transform 0.3s ease;
+}
+
+h1.logo-title span {
+  transform: scale(0.9);
+  display: inline-block;
+}
+
+h1.logo-title span:first-child {
+  animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+h1.logo-title span:last-child {
+  animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+@keyframes bop {
+  0% {
+    transform: scale(0.9);
+  }
+  50%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}
+
+/* Header con flex para título a la izquierda y selector de idioma a la derecha */
+.header {
+  width: 100%;
+  padding: 1.25rem 2.5rem 0.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Selector de Idiomas adaptado al fondo claro */
+.lang-select {
+  background: rgba(255, 255, 255, 0.85);
+  color: #2d3748;
+  border: 2px solid rgba(123, 44, 191, 0.4);
+  padding: 0.5rem 0.95rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+  outline: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.lang-select:hover,
+.lang-select:focus {
+  border-color: #7b2cbf;
+  color: #7b2cbf;
+  box-shadow: 0 0 15px rgba(123, 44, 191, 0.25);
+}
+
+.lang-select option {
+  background: #ffffff;
+  color: #1a202c;
+}
+
+/* Área principal */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor Grid (preparado para 1 tarjeta o múltiples) */
+.concerts-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- TARJETA DE CONCIERTO (TICKET) --- */
+.ticket-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  color: #111111;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  font-family: 'Outfit', sans-serif;
+  transition: transform 0.3s ease;
+  margin: 1rem auto;
+}
+
+.ticket-card:hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+/* Agujeros / Muescas Superiores */
+.ticket-holes-top {
+  height: 48px;
+  width: 48px;
+  background-color: var(--bg-page);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -24px;
+  z-index: 5;
+}
+
+.ticket-holes-top::before,
+.ticket-holes-top::after {
+  content: '';
+  height: 48px;
+  width: 48px;
+  background-color: var(--bg-page);
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ticket-holes-top::before {
+  left: -200px;
+}
+
+.ticket-holes-top::after {
+  left: 200px;
+}
+
+/* Cabecera del ticket */
+.ticket-header {
+  padding: 40px 24px 12px 24px;
+  text-align: left;
+}
+
+.ticket-venue {
+  color: #718096;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.ticket-artist {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: #1a202c;
+  letter-spacing: 0.03em;
+}
+
+/* Poster */
+.ticket-poster {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  background-color: #0b1d28;
+}
+
+.ticket-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ticket-card:hover .ticket-poster img {
+  transform: scale(1.04);
+}
+
+/* Información de Tablas */
+.ticket-info {
+  padding: 16px 24px 6px 24px;
+}
+
+.ticket-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+}
+
+.ticket-data-table th {
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #888888;
+  letter-spacing: 0.05em;
+  padding-bottom: 4px;
+}
+
+.ticket-data-table th:nth-of-type(1) { width: 38%; }
+.ticket-data-table th:nth-of-type(2) { width: 37%; }
+.ticket-data-table th:nth-of-type(3) { width: 25%; }
+
+.ticket-data-table td {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.2;
+}
+
+.ticket-data-table td.bigger {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.7rem;
+  color: #0b1d28;
+  letter-spacing: 0.02em;
+}
+
+/* Separador perforado / línea discontinua con muescas */
+.ticket-holes-lower {
+  position: relative;
+  margin: 18px 0 10px 0;
+  border-top: 2px dashed #cbd5e0;
+}
+
+.ticket-holes-lower::before,
+.ticket-holes-lower::after {
+  content: '';
+  height: 36px;
+  width: 36px;
+  background-color: var(--bg-page);
+  position: absolute;
+  border-radius: 50%;
+  top: -18px;
+  z-index: 5;
+}
+
+.ticket-holes-lower::before {
+  left: -18px;
+}
+
+.ticket-holes-lower::after {
+  right: -18px;
+}
+
+/* Sección Serial y Código de Barras */
+.ticket-serial {
+  padding: 8px 24px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barcode-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.barcode-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.barcode-table td {
+  width: 2px;
+  height: 45px;
+  padding: 0;
+}
+
+.numbers-wrapper {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.numbers-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.numbers-table td {
+  font-size: 0.78rem;
+  font-family: monospace;
+  font-weight: 600;
+  text-align: center;
+  color: #4a5568;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .header-right {
+    align-self: flex-end;
+  }
+
+  .ticket-card {
+    max-width: 340px;
+  }
+}
