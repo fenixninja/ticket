@@ -84,6 +84,8 @@ Diccionario de internacionalización indexado por código ISO de idioma:
   - Lado derecho: Selector desplegable `<select id="langSelect">` con banderas y códigos de idioma.
 - **Main (`<main class="main-content">`)**:
   - Aloja la sección `<section id="concertsContainer" class="concerts-grid">`, donde JavaScript inyecta los tickets de forma reactiva.
+- **Footer (`<footer class="footer">`)**:
+  - Pie de página con créditos del autor (`fenix.ninja`) y enlace directo al repositorio de GitHub (`https://github.com/fenixninja/ticket`).
 
 ---
 

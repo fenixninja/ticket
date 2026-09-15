@@ -385,6 +385,51 @@ h1.logo-title span:last-child {
   letter-spacing: 1px;
 }
 
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 1.5rem 1rem 2.2rem 1rem;
+  text-align: center;
+  font-size: 0.92rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-separator {
+  opacity: 0.5;
+}
+
+.footer-link {
+  color: #7b2cbf;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #5a189a;
+  background-color: rgba(123, 44, 191, 0.08);
+  transform: translateY(-1px);
+}
+
+.github-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .header {
@@ -400,5 +445,10 @@ h1.logo-title span:last-child {
 
   .ticket-card {
     max-width: 340px;
+  }
+
+  .footer {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    font-size: 0.85rem;
   }
 }
