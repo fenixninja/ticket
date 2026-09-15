@@ -2,6 +2,8 @@
 
 Demostración técnica de ticketing interactivo y diseño de boletos digitales orientados a la integración de autenticación, validación y entrega de entradas mediante **WhatAUTH** y **códigos QR de WhatsApp**.
 
+> 🌐 **Demo en vivo:** [https://tickees.fenix.ninja/](https://tickees.fenix.ninja/)
+
 ---
 
 ## 📌 Propósito del Proyecto
