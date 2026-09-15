@@ -169,11 +169,13 @@ h1.logo-title span:last-child {
   justify-content: center;
 }
 
-/* Contenedor Grid (preparado para 1 tarjeta o múltiples) */
+/* Contenedor Grid adaptable a múltiples tarjetas */
 .concerts-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 400px));
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  gap: 2.5rem;
   width: 100%;
 }
 
