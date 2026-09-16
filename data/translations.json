@@ -8,7 +8,11 @@
     "price": "PRECIO",
     "date": "FECHA",
     "time": "HORA",
-    "buyTicket": "COMPRAR ENTRADA"
+    "buyTicket": "COMPRAR ENTRADA",
+    "liveNow": "EN VIVO",
+    "tourPromo": "GIRA EN VIVO",
+    "ticketsAvailable": "ENTRADAS DISPONIBLES",
+    "fromPrice": "DESDE"
   },
   "en": {
     "appTitle": "TICKEES",
@@ -19,7 +23,11 @@
     "price": "PRICE",
     "date": "DATE",
     "time": "TIME",
-    "buyTicket": "BUY TICKET"
+    "buyTicket": "BUY TICKET",
+    "liveNow": "LIVE NOW",
+    "tourPromo": "LIVE TOUR",
+    "ticketsAvailable": "TICKETS AVAILABLE",
+    "fromPrice": "FROM"
   },
   "de": {
     "appTitle": "TICKEES",
@@ -30,7 +38,11 @@
     "price": "PREIS",
     "date": "DATUM",
     "time": "UHRZEIT",
-    "buyTicket": "TICKET KAUFEN"
+    "buyTicket": "TICKET KAUFEN",
+    "liveNow": "LIVE",
+    "tourPromo": "LIVE TOURNEE",
+    "ticketsAvailable": "TICKETS VERFÜGBAR",
+    "fromPrice": "AB"
   },
   "fr": {
     "appTitle": "TICKEES",
@@ -41,7 +53,11 @@
     "price": "PRIX",
     "date": "DATE",
     "time": "HEURE",
-    "buyTicket": "ACHETER BILLET"
+    "buyTicket": "ACHETER BILLET",
+    "liveNow": "EN DIRECT",
+    "tourPromo": "TOURNÉE EN DIRECT",
+    "ticketsAvailable": "BILLETS DISPONIBLES",
+    "fromPrice": "DÈS"
   },
   "hi": {
     "appTitle": "TICKEES",
@@ -52,7 +68,11 @@
     "price": "मूल्य",
     "date": "तारीख",
     "time": "समय",
-    "buyTicket": "टिकट खरीदें"
+    "buyTicket": "टिकट खरीदें",
+    "liveNow": "लाइव",
+    "tourPromo": "लाइव टूर",
+    "ticketsAvailable": "टिकट उपलब्ध हैं",
+    "fromPrice": "न्यूनतम"
   },
   "zh": {
     "appTitle": "TICKEES",
@@ -63,7 +83,11 @@
     "price": "价格",
     "date": "日期",
     "time": "时间",
-    "buyTicket": "购买门票"
+    "buyTicket": "购买门票",
+    "liveNow": "现场巡演",
+    "tourPromo": "巡回演出",
+    "ticketsAvailable": "门票热售中",
+    "fromPrice": "起价"
   },
   "ja": {
     "appTitle": "TICKEES",
@@ -74,6 +98,10 @@
     "price": "価格",
     "date": "日付",
     "time": "時間",
-    "buyTicket": "チケット購入"
+    "buyTicket": "チケット購入",
+    "liveNow": "ライブ開催中",
+    "tourPromo": "ライブツアー",
+    "ticketsAvailable": "チケット販売中",
+    "fromPrice": "から"
   }
 }

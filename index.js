@@ -158,6 +158,59 @@ function renderConcerts() {
   });
 }
 
+// 5. Renderizado del Announcement Bar (Top Bar dinámico con conciertos y multi-idioma)
+function renderAnnouncements() {
+  const track = document.getElementById('announcementTrack');
+  const badgeText = document.getElementById('announcementBadgeText');
+  if (badgeText) {
+    badgeText.textContent = t('liveNow');
+  }
+  if (!track) return;
+
+  if (!AppState.concerts || AppState.concerts.length === 0) {
+    track.innerHTML = '';
+    return;
+  }
+
+  // Generamos los items para los conciertos
+  const concertItems = AppState.concerts.map((concert, index) => {
+    const formattedDate = getFutureDate(concert.daysOffset || 3);
+    return `
+      <div class="announcement-item" data-concert-index="${index}">
+        <span class="announcement-ticket-icon">🎟️</span>
+        <strong class="announcement-artist">${concert.artist}</strong>
+        <span class="announcement-separator">•</span>
+        <span class="announcement-tour">${concert.tour}</span>
+        <span class="announcement-badge-stage">${concert.screen}</span>
+        <span class="announcement-date">📅 ${formattedDate}</span>
+        <span class="announcement-price">${t('fromPrice')} ${concert.currency}${concert.price.toFixed(2)}</span>
+        <span class="announcement-btn">${t('buyTicket')} →</span>
+      </div>
+    `;
+  }).join('<span class="announcement-bullet">★</span>');
+
+  // Duplicamos el contenido para garantizar un bucle continuo e infinito (seamless marquee)
+  track.innerHTML = `
+    <div class="announcement-content">${concertItems}</div>
+    <div class="announcement-content" aria-hidden="true">${concertItems}</div>
+  `;
+
+  // Interacción al hacer click en un item del ticker: scroll suave al ticket correspondiente
+  track.querySelectorAll('.announcement-item').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const idx = el.getAttribute('data-concert-index');
+      const cards = document.querySelectorAll('.ticket-card');
+      if (cards && cards[idx]) {
+        cards[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        cards[idx].classList.add('ticket-highlight');
+        setTimeout(() => {
+          cards[idx].classList.remove('ticket-highlight');
+        }, 1800);
+      }
+    });
+  });
+}
+
 // Cargar conciertos
 async function loadConcerts() {
   try {
@@ -170,6 +223,7 @@ async function loadConcerts() {
 }
 
 function renderApp() {
+  renderAnnouncements();
   renderConcerts();
 }
 
@@ -179,3 +233,4 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadConcerts();
   renderApp();
 });
+
