@@ -21,6 +21,37 @@ html,
 body {
   min-height: 100vh;
   width: 100%;
+  /* Soporte estándar moderno para Firefox y navegadores compatibles */
+  scrollbar-width: thin;
+  scrollbar-color: var(--aurora-teal) var(--bg-page-shade);
+}
+
+/* Personalización de Scrollbar para navegadores WebKit (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page-shade);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--aurora-teal), var(--aurora-cyan), var(--accent-lavender));
+  border-radius: 9999px;
+  border: 2px solid var(--bg-page-shade);
+  box-shadow: 0 0 10px rgba(15, 225, 183, 0.5);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffffff, var(--aurora-teal), var(--aurora-cyan));
+  box-shadow: 0 0 16px rgba(15, 225, 183, 0.9);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-page-shade);
 }
 
 body {
